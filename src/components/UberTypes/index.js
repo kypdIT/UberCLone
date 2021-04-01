@@ -13,8 +13,8 @@ const UberTypes = props => {
   };
   return (
     <View>
-      {typesData.map((type, index) => (
-        <UberTypeRow key={index} type={type} />
+      {typesData.map(type => (
+        <UberTypeRow key={type.id} type={type} />
       ))}
 
       <Pressable

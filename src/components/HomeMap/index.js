@@ -23,6 +23,7 @@ const HomeMap = props => {
     <MapView
       style={{width: '100%', height: '100%'}}
       provider={PROVIDER_GOOGLE}
+      showsUserLocation={true}
       initialRegion={{
         latitude: 10.787011183583429,
         longitude: 106.63759933376883,
@@ -38,6 +39,11 @@ const HomeMap = props => {
               width: 70,
               height: 70,
               resizeMode: 'contain',
+              transform: [
+                {
+                  rotate: `${car.heading}deg`,
+                },
+              ],
             }}
             source={getImage(car.type)}
           />
